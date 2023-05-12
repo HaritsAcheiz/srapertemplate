@@ -15,8 +15,12 @@ class Item:
 class Scraper:
 
     def fetch(self, url):
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0'
+        }
+
         with requests.Session() as s:
-            r = s.get(url)
+            r = s.get(url, headers=headers)
         try:
             r.raise_for_status()
         except requests.exceptions.HTTPError as e:
@@ -70,3 +74,10 @@ class Scraper:
                     continue
         except:
             pass
+
+if __name__ == '__main__':
+    s=Scraper()
+    url = 'https://www.google.com'
+    r = s.fetch(url)
+    print(r)
+    print(r.text)
