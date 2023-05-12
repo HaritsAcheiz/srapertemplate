@@ -1,0 +1,2 @@
+# srapertemplate
+template for webscraper
