@@ -6,7 +6,7 @@ authors = ["HaritsAcheiz <harits.muhammad.only@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 requests = "^2.30.0"
 selectolax = "^0.3.13"
 
